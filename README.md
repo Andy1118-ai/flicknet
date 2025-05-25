@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# FlickNet 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern streaming platform built with React, Node.js, and MongoDB. FlickNet offers a Netflix-style experience with freemium features, subscription management, and a comprehensive movie catalog.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **🎯 Freemium Model**: Public dashboard with premium features for subscribers
+- **🔐 Authentication**: Secure user registration and login system
+- **💳 Subscription Management**: Multiple tiers (Free, Basic, Premium) with Stripe integration
+- **🎬 Movie Catalog**: Extensive movie database with genres, ratings, and details
+- **🎨 Modern UI**: Tailwind CSS with blue color scheme and smooth animations
+- **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
+- **🔔 Notifications**: Real-time user notifications and updates
+- **⚡ Fast Performance**: Optimized React components and efficient data loading
 
-### `npm start`
+## 🚀 Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB Atlas account
+- Stripe account (for payments)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Andy1118-ai/flicknet.git
+   cd flicknet
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Edit `.env` with your MongoDB Atlas and Stripe credentials.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Start the backend server** (in a new terminal)
+   ```bash
+   cd server
+   node server.js
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
 
-### `npm run eject`
+- **Frontend**: React, Tailwind CSS, Context API
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB Atlas
+- **Authentication**: JWT tokens
+- **Payments**: Stripe
+- **Styling**: Tailwind CSS with custom animations
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+flicknet/
+├── src/
+│   ├── components/          # React components
+│   │   ├── auth/           # Authentication components
+│   │   ├── dashboard/      # Dashboard components
+│   │   ├── movies/         # Movie-related components
+│   │   ├── payment/        # Payment components
+│   │   └── ui/             # Reusable UI components
+│   ├── context/            # React Context providers
+│   ├── services/           # API services
+│   └── styles/             # Global styles
+├── server/
+│   ├── controllers/        # Route controllers
+│   ├── models/            # Database models
+│   ├── routes/            # API routes
+│   └── middleware/        # Custom middleware
+└── public/                # Static assets
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎬 Available Scripts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
 
-## Learn More
+### Backend
+- `node server/server.js` - Starts the backend server
+- `node server/scripts/seedDatabase.js` - Seeds the database with sample data
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌟 Key Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Authentication & Authorization
+- JWT-based authentication
+- Role-based access control
+- Secure password hashing
 
-### Code Splitting
+### Subscription System
+- Three-tier subscription model (Free, Basic, Premium)
+- Stripe payment integration
+- Automatic subscription management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Movie System
+- Genre-based navigation
+- Movie details and ratings
+- Recommendation engine
+- Search functionality
 
-### Analyzing the Bundle Size
+### User Experience
+- Smooth animations and transitions
+- Loading states and error handling
+- Responsive design for all devices
+- Dark/light theme support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📚 Documentation
 
-### Making a Progressive Web App
+For detailed setup and development guides, check out:
+- [Backend Setup Guide](./BACKEND_SETUP.md)
+- [MongoDB Setup Guide](./MONGODB_SETUP_GUIDE.md)
+- [Frontend-Backend Integration](./FRONTEND_BACKEND_INTEGRATION.md)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing
 
-### Advanced Configuration
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 License
 
-### Deployment
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🙏 Acknowledgments
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Built with Create React App
+- Styled with Tailwind CSS
+- Icons from Heroicons
+- Movie data from sample datasets
